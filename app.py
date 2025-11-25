@@ -2,6 +2,12 @@ print("Welcome to my Python program!")
 
 amount = input("How much money did you make today? $")
 
+try:
+    amount = float(amount)
+except ValueError:
+    print("Please enter a valid number.")
+    exit()
+    
 amount = float(amount)
 weekly_total = amount * 7
 
